@@ -1,0 +1,8 @@
+title: Modernizing E-Rate 101
+desc: Deliver digital learning to more kids faster
+
+baseurl: /modernizing-e-rate-101
+markdown: kramdown
+sass:
+  sass_dir: css/scss
+  style: :expanded

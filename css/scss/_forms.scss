@@ -1,0 +1,21 @@
+input {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  color: #51545B;
+  font-family: "Source Sans Pro";
+  font-size: 14px;
+  padding: 4px 6px;
+
+  [disabled] {
+    background-color: #f5f5f5;
+    color: #999;
+  }
+}
+label {
+  display: block;
+  font-weight: 600;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,16 @@
+.content {
+  li {
+    padding-bottom: 3px;
+  }
+}
+
+.no-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inline li {
+  display: inline;
+  margin-right: 10px;
+}

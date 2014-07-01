@@ -1,0 +1,902 @@
+<footer>
+  <section class="contact">
+    <address>
+      Federal Communications Commission<br />
+      445 12th Street SW<br />
+      Washington, DC 20554
+    </address>
+    <ul>
+      <li>Phone: 1-888-225-5322</li>
+      <li>TTY:  1-888-835-5322</li>
+      <li>Fax: 1-866-418-0232</li>
+      <li><a href="//fcc.gov/contact-us" title="Contact Us">Contact Us</a></li>
+    </ul>
+  </section>
+  <section class="nav">
+    <ul>
+      <li><a href="//fcc.gov/encyclopedia/privacy-policy" title="Privacy Policy">Privacy Policy</a></li>
+      <li><a href="//fcc.gov/comment-policy" title="Moderation Policy">Moderation Policy</a></li>
+      <li><a href="//fcc.gov/encyclopedia/website-notices" title="Website Policies &amp; Notices">Website Policies &amp; Notices</a></li>
+      <li><a href="//fcc.gov/encyclopedia/required-plug-ins-players-and-readers" title="Required Browser &amp; Plug-ins">Required Browser &amp; Plug-ins</a></li>
+      <li><a href="//fcc.gov/foia" title="FOIA">FOIA</a></li>
+      <li><a href="//fcc.gov/encyclopedia/no-fear-act-data" title="No Fear Act Data">No Fear Act Data</a></li>
+    </ul>
+    <ul>
+      <li><a href="//fcc.gov/digitalstrategy" title="FCC Digital Strategy">FCC Digital Strategy</a></li>
+      <li><a href="//fcc.gov/open" title="Open Government Directive">Open Government Directive</a></li>
+      <li><a href="//fcc.gov/encyclopedia/plain-writing-fcc" title="Plain Writing Act">Plain Writing Act</a></li>
+      <li><a href="//fcc.gov/encyclopedia/american-recovery-and-reinvestment-act-2009" title="2009 Recovery and Reinvestment Act">2009 Recovery and Reinvestment Act</a></li>
+      <li><a href="//fcc.gov/rss" title="RSS Feeds &amp; Email Updates">RSS Feeds &amp; Email Updates</a></li>
+      <li><a href="//fcc.gov/encyclopedia/disability-rights-office" title="Disability Rights">Disability Rights</a></li>
+    </ul>
+  </section>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  var colors = {
+    'red': '#eb5142',
+    'yellow': '#fcd208',
+    'green': '#54af46',
+    'blue': '#0e8fca'
+  };
+
+  $('#schools').highcharts({
+
+    chart: {
+      backgroundColor: '#f5f5f5',
+      type: 'column',
+      style: {
+        fontFamily: 'Source Sans Pro'
+      }
+    },
+
+    legend: {
+      borderColor: '#ddd',
+      borderWidth: 1,
+      borderRadius: 2,
+      itemStyle: {
+        color: '#222',
+        fontSize: '12px',
+        fontWeight: '400',
+      }
+    },
+
+    colors: [
+      "rgba(25, 73, 138, .6)",
+      "rgba(25, 73, 138, 1)"
+    ],
+
+    title: {
+      text: 'Schools',
+      style: {
+        color: '#222',
+        fontSize: '18px',
+        fontWeight: '600',
+        textTransform: 'uppercase'
+      }
+    },
+
+    xAxis: {
+      categories: ['FY 2008', 'FY 2009', 'FY 2010', 'FY 2011', 'FY 2012', 'FY 2013'],
+      labels: {
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      tickWidth: 0,
+      lineColor: '#dddddd'
+    },
+
+    yAxis: {
+      allowDecimals: false,
+      labels: {
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      min: 0,
+      title: {
+        text: null,
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      gridLineColor: "#dddddd"
+    },
+
+    tooltip: {
+      formatter: function() {
+        return '<strong>' + this.series.name +': '+ this.y +'</strong>';
+      }
+    },
+
+    plotOptions: {
+      /*column: {
+        //stacking: 'normal'
+      },
+      series: {
+        borderWidth: 0,
+        dataLabels: {
+          align: 'left',
+          color: '#222',
+          enabled: true,
+          style: {
+            fontSize: '14px',
+            fontWeight: '600'
+          },
+          padding: 0,
+          verticalAlign: 'bottom',
+        }
+      }*/
+    },
+
+    series: [{
+      name: 'Total Schools',
+      data: [103980, 104656, 100311, 110855, 110706, 116000]
+    },{
+      name: 'Funded Schools',
+      data: [5190, 7380, 12448, 5180, 5767, 0]
+    }],
+    credits: {
+      enabled: false
+    }
+  });
+
+  // libraries
+  $('#libraries').highcharts({
+
+    chart: {
+      backgroundColor: '#f5f5f5',
+      type: 'column',
+      style: {
+        fontFamily: 'Source Sans Pro'
+      }
+    },
+
+    legend: {
+      borderColor: '#ddd',
+      borderWidth: 1,
+      borderRadius: 2,
+      itemStyle: {
+        color: '#222',
+        fontSize: '12px',
+        fontWeight: '400',
+      },
+    },
+
+    colors: [
+      "rgba(188, 39, 52, .6)",
+      "rgba(188, 39, 52, 1)"
+    ],
+
+    title: {
+      text: 'Libraries',
+      style: {
+        color: '#222',
+        fontSize: '18px',
+        fontWeight: '600',
+        textTransform: 'uppercase'
+      }
+    },
+
+    xAxis: {
+      categories: ['FY 2008', 'FY 2009', 'FY 2010', 'FY 2011', 'FY 2012', 'FY 2013'],
+      tickWidth: 0,
+      labels: {
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      lineColor: '#dddddd'
+    },
+
+    yAxis: {
+      allowDecimals: false,
+      labels: {
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      min: 0,
+      title: {
+        text: null,
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      gridLineColor: "#dddddd"
+    },
+
+    tooltip: {
+      backgroundColor: '#fff',
+      borderColor: '#999',
+      formatter: function() {
+        return '<strong>' + this.series.name +': '+ this.y +'</strong>';
+      },
+      shadow: false,
+      style: {
+        fontSize: '14px'
+      }
+    },
+
+    plotOptions: {
+      /*column: {
+        //stacking: 'normal'
+      },
+      series: {
+        borderWidth: 0,
+        dataLabels: {
+          align: 'left',
+          color: '#222',
+          enabled: true,
+          style: {
+            fontSize: '14px',
+            fontWeight: '600'
+          },
+          padding: 0,
+          verticalAlign: 'bottom',
+        }
+      }*/
+    },
+
+    series: [{
+      name: 'Total Libraries',
+      data: [16671, 16698, 16417, 16415, 16415, 16415]
+    },{
+      name: 'Funded Libraries',
+      data: [163, 424, 437, 213, 177, 0]
+    }],
+    credits: {
+      enabled: false
+    }
+  });
+
+  // budget
+  /*$('#budget').highcharts({
+
+    chart: {
+      type: 'column',
+      style: {
+        fontFamily: 'Source Sans Pro'
+      }
+    },
+
+    colors: [
+      "rgba(188, 39, 52, 1)",
+      "rgba(25, 73, 138, 1)"
+    ],
+
+    title: {
+      text: 'E-Rate Funding',
+      style: {
+        color: '#222',
+        fontSize: '18px',
+        fontWeight: '600',
+        textTransform: 'uppercase'
+      }
+    },
+
+    xAxis: {
+      categories: ['2014', '2015', '2016'],
+      tickWidth: 0,
+      lineColor: '#dddddd',
+      labels: {
+         style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      }
+    },
+
+    yAxis: {
+      allowDecimals: true,
+      tickInterval: 0.5,
+      min: 0,
+      title: {
+        text: null
+      },
+      labels: {
+        format: '${value}',
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      gridLineColor: "#dddddd"
+    },
+
+    tooltip: {
+      formatter: function() {
+        return '<strong>' + this.series.name +': $'+ this.y +'</strong><br/>'+
+          '<strong>Total: $'+ this.point.stackTotal + '</strong>';
+      }
+    },
+
+    plotOptions: {
+      column: {
+        stacking: 'normal'
+      }
+    },
+
+    series: [{
+      name: 'New Wi-Fi Funding',
+      data: [0, 1.0, 1.0]
+    },
+      {
+      name: 'Base Connectivity Funding',
+      data: [2.6, 2.4, 2.4]
+    }],
+    credits: {
+      enabled: false
+    }
+  });*/
+
+  // rural
+  $('#rural').highcharts({
+
+    chart: {
+      type: 'column',
+      style: {
+        fontFamily: 'Source Sans Pro'
+      }
+    },
+
+    legend: {
+      borderColor: '#ddd',
+      borderWidth: 1,
+      borderRadius: 2,
+      itemStyle: {
+        color: '#222',
+        fontSize: '12px',
+        fontWeight: '400',
+      },
+    },
+
+    colors: [
+      "rgb(173, 220, 145)",
+      "rgb(44, 179, 74)"
+    ],
+
+    title: {
+      text: 'Rural',
+      style: {
+        color: '#222',
+        fontSize: '18px',
+        fontWeight: '600',
+        textTransform: 'uppercase'
+      }
+    },
+
+    xAxis: {
+      //categories: ['2014', '2015', '2016'],
+      tickWidth: 0,
+      lineColor: '#dddddd',
+      labels: {
+        enabled: false
+      }
+    },
+
+    yAxis: {
+      allowDecimals: true,
+      tickInterval: 200,
+      min: 0,
+      title: {
+        text: "Millions",
+        style: {
+          color: '#222',
+          fontWeight: '600'
+        }
+      },
+      labels: {
+        formatter: function() {
+          return '$' + Highcharts.numberFormat(this.value, 0);
+        },
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      gridLineColor: "#dddddd"
+    },
+
+    tooltip: {
+      formatter: function() {
+        return '<strong>' + '$' + Highcharts.numberFormat(this.y, 0) + '</strong>';
+      }
+    },
+
+    plotOptions: {
+      column: {
+        //stacking: 'normal'
+      }
+    },
+
+    series: [{
+      name: 'Last 5 Years',
+      data: [591.3]
+    },
+      {
+      name: 'Next 5 Years',
+      data: [1048.2]
+    }],
+    credits: {
+      enabled: false
+    }
+  });
+
+  // urban
+  $('#urban').highcharts({
+
+    chart: {
+      type: 'column',
+      style: {
+        fontFamily: 'Source Sans Pro'
+      }
+    },
+
+    legend: {
+      borderColor: '#ddd',
+      borderWidth: 1,
+      borderRadius: 2,
+      itemStyle: {
+        color: '#222',
+        fontSize: '12px',
+        fontWeight: '400',
+      }
+    },
+
+    colors: [
+      "rgba(170, 170, 170, 1)",
+      "rgba(68, 68, 68, 1)"
+    ],
+
+    title: {
+      text: 'Urban & Suburban',
+      style: {
+        color: '#222',
+        fontSize: '18px',
+        fontWeight: '600',
+        textTransform: 'uppercase'
+      }
+    },
+
+    xAxis: {
+      //categories: ['2014', '2015', '2016'],
+      tickWidth: 0,
+      lineColor: '#dddddd',
+      labels: {
+        enabled: false
+      }
+    },
+
+    yAxis: {
+      allowDecimals: true,
+      tickInterval: 500,
+      min: 0,
+      title: {
+        text: "Millions",
+        style: {
+          color: '#222',
+          fontWeight: '600'
+        }
+      },
+      labels: {
+        formatter: function() {
+          return '$' + Highcharts.numberFormat(this.value, 0);
+        },
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      gridLineColor: "#dddddd"
+    },
+
+    tooltip: {
+      formatter: function() {
+        return '<strong>' + '$' + Highcharts.numberFormat(this.y, 0) + '</strong>';
+      }
+    },
+
+    plotOptions: {
+      column: {
+        //stacking: 'normal'
+      }
+    },
+
+    series: [{
+      name: 'Last 5 Years',
+      data: [2497.2]
+    },
+      {
+      name: 'Next 5 Years',
+      data: [4015.3]
+    }],
+    credits: {
+      enabled: false
+    }
+  });
+
+  // students next 5
+  $('#students-5').highcharts({
+
+    chart: {
+      backgroundColor: '#f5f5f5',
+      type: 'column',
+      style: {
+        fontFamily: 'Source Sans Pro'
+      }
+    },
+
+    legend: {
+      borderColor: '#ddd',
+      borderWidth: 1,
+      borderRadius: 2,
+      itemStyle: {
+        color: '#222',
+        fontSize: '12px',
+        fontWeight: '400',
+      }
+    },
+
+    colors: [
+      "rgba(131, 7, 150, .6)",
+      "rgba(131, 7, 150, 1)"
+    ],
+
+    title: {
+      text: 'Students',
+      style: {
+        color: '#222',
+        fontSize: '18px',
+        fontWeight: '600',
+        textTransform: 'uppercase'
+      }
+    },
+
+    xAxis: {
+      //categories: ['2014', '2015', '2016'],
+      tickWidth: 0,
+      lineColor: '#dddddd',
+      labels: {
+        enabled: false
+      }
+    },
+
+    yAxis: {
+      allowDecimals: true,
+      min: 0,
+      title: {
+        enabled: false
+      },
+      labels: {
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0);
+        },
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      gridLineColor: "#dddddd"
+    },
+
+    tooltip: {
+      formatter: function() {
+        return '<strong>' + Highcharts.numberFormat(this.y, 0) + '</strong>';
+      }
+    },
+
+    plotOptions: {
+      column: {
+        //stacking: 'normal'
+      }
+    },
+
+    series: [{
+      name: 'Last 5 Years',
+      data: [9961931]
+    },
+      {
+      name: 'Next 5 Years',
+      data: [53434842]
+    }],
+    credits: {
+      enabled: false
+    }
+  });
+
+  // schools next 5
+  $('#schools-5').highcharts({
+
+    chart: {
+      backgroundColor: '#f5f5f5',
+      type: 'column',
+      style: {
+        fontFamily: 'Source Sans Pro'
+      }
+    },
+
+    legend: {
+      borderColor: '#ddd',
+      borderWidth: 1,
+      borderRadius: 2,
+      itemStyle: {
+        color: '#222',
+        fontSize: '12px',
+        fontWeight: '400',
+      }
+    },
+
+    colors: [
+      "rgba(25, 73, 138, .6)",
+      "rgba(25, 73, 138, 1)"
+    ],
+
+    title: {
+      text: 'Schools',
+      style: {
+        color: '#222',
+        fontSize: '18px',
+        fontWeight: '600',
+        textTransform: 'uppercase'
+      }
+    },
+
+    xAxis: {
+      //categories: ['2014', '2015', '2016'],
+      tickWidth: 0,
+      lineColor: '#dddddd',
+      labels: {
+        enabled: false
+      }
+    },
+
+    yAxis: {
+      allowDecimals: true,
+      min: 0,
+      title: {
+        enabled: false
+      },
+      labels: {
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0);
+        },
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      gridLineColor: "#dddddd"
+    },
+
+    tooltip: {
+      formatter: function() {
+        return '<strong>' + Highcharts.numberFormat(this.y, 0) + '</strong>';
+      }
+    },
+
+    plotOptions: {
+      column: {
+        //stacking: 'normal'
+      }
+    },
+
+    series: [{
+      name: 'Last 5 Years',
+      data: [21510]
+    },
+      {
+      name: 'Next 5 Years',
+      data: [123120]
+    }],
+    credits: {
+      enabled: false
+    }
+  });
+
+  // libraries next 5
+  $('#libraries-5').highcharts({
+
+    chart: {
+      backgroundColor: '#f5f5f5',
+      type: 'column',
+      style: {
+        fontFamily: 'Source Sans Pro'
+      }
+    },
+
+    legend: {
+      borderColor: '#ddd',
+      borderWidth: 1,
+      borderRadius: 2,
+      itemStyle: {
+        color: '#222',
+        fontSize: '12px',
+        fontWeight: '400',
+      }
+    },
+
+    colors: [
+       "rgba(188, 39, 52, .6)",
+      "rgba(188, 39, 52, 1)"
+    ],
+
+    title: {
+      text: 'Libraries',
+      style: {
+        color: '#222',
+        fontSize: '18px',
+        fontWeight: '600',
+        textTransform: 'uppercase'
+      }
+    },
+
+    xAxis: {
+      //categories: ['2014', '2015', '2016'],
+      tickWidth: 0,
+      lineColor: '#dddddd',
+      labels: {
+        enabled: false
+      }
+    },
+
+    yAxis: {
+      allowDecimals: true,
+      min: 0,
+      title: {
+        enabled: false
+      },
+      labels: {
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0);
+        },
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      gridLineColor: "#dddddd"
+    },
+
+    tooltip: {
+      formatter: function() {
+        return '<strong>' + Highcharts.numberFormat(this.y, 0) + '</strong>';
+      }
+    },
+
+    plotOptions: {
+      column: {
+        //stacking: 'normal'
+      }
+    },
+
+    series: [{
+      name: 'Last 5 Years',
+      data: [1067]
+    },
+      {
+      name: 'Next 5 Years',
+      data: [16836]
+    }],
+    credits: {
+      enabled: false
+    }
+  });
+  // students
+  /*$('#students').highcharts({
+
+    chart: {
+      type: 'column',
+      style: {
+        fontFamily: 'Source Sans Pro'
+      }
+    },
+
+    legend: {
+      enabled: false
+    },
+
+    colors: [
+      "rgba(25, 73, 138, 1)",
+      "rgba(188, 39, 52, 1)",
+      "#222"
+    ],
+
+    title: {
+      text: 'Students, School, and Libraries Served',
+      style: {
+        color: '#222',
+        fontSize: '18px',
+        fontWeight: '600',
+        textTransform: 'uppercase'
+      }
+    },
+
+    xAxis: {
+      categories: ['Students', 'Schools', 'Libraries'],
+      tickWidth: 0,
+      lineColor: '#dddddd',
+      labels: {
+        enabled: true,
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      }
+    },
+
+    yAxis: {
+      allowDecimals: true,
+      min: 0,
+      max: 20000000,
+      title: {
+        text: null,
+        style: {
+          color: '#222',
+          fontSize: '16',
+          fontWeight: '600'
+        }
+      },
+      labels: {
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0);
+        },
+        style: {
+          color: '#222',
+          fontSize: '14px',
+          fontWeight: '400'
+        }
+      },
+      gridLineColor: "#dddddd"
+    },
+
+    tooltip: {
+      formatter: function() {
+        return '<strong>'+ Highcharts.numberFormat(this.y, 0) +'</strong>';
+      }
+    },
+
+    plotOptions: {
+      column: {
+        //stacking: 'normal'
+      }
+    },
+
+    series: [{
+      name: 'Last 5 Years',
+      data: [9961931, 21510, 1067]
+    },
+      {
+      name: 'Next 5 Years',
+      data: [53434842, 123120, 16836]
+    }],
+    credits: {
+      enabled: false
+    }
+  });*/
+});
+</script>

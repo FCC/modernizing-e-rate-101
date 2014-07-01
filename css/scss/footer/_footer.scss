@@ -1,0 +1,31 @@
+footer {
+  border-top: 1px solid #ddd;
+  padding: 25px 10px 0;
+  font-size: 14px;
+  .contact {
+    @media only screen and (min-width : 700px) {
+      float: left;
+    }
+  }
+  address {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+  }
+  .nav {
+    @media only screen and (min-width : 700px) {
+      float: right;
+      margin-left: 20px;
+    }
+    ul {
+      @media only screen and (min-width : 900px) {
+        float: right;
+        margin-left: 50px;
+      }
+    }
+  }
+}

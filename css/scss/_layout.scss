@@ -1,0 +1,54 @@
+.row {
+
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 10px;
+}
+.content {
+  margin: 0 auto;
+  max-width: 600px;
+  @media only screen and (min-width : 1024px) {
+  }
+  &.notes {
+    position: relative;
+    top: -20px;
+    padding-top: 0;
+    text-align: center;
+    ol {
+      padding: 0 0 0 15px;
+    }
+  }
+}
+.notes p, .notes li {
+  color:#777;
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+.col-half {
+  width: 100%;
+  @media only screen and (min-width : 1024px) {
+    float: left;
+    margin: 0 2.5%;
+    width: 45%;
+  }
+}
+
+.col-third {
+  width: 100%;
+  @media only screen and (min-width : 1024px) {
+    float: left;
+    margin: 0 2.5%;
+    width: 28.33333%;
+  }
+}
+
+figure {
+  margin: 0 0 20px 0;
+}
+figure.content {
+  padding-top: 0;
+}
