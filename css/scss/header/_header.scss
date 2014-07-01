@@ -29,6 +29,7 @@ header {
 }
 .banner {
   padding: 25px 10px;
-  @media only screen and (min-width : 750px) {
+  img {
+    margin-bottom: 20px;
   }
 }
