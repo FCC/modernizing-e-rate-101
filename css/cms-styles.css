@@ -130,6 +130,10 @@ a:visited:hover {
   font-size: 18px;
 }
 
+.main {
+  padding: 50px 0 30px;
+}
+
 .inverse {
   background: #f5f5f5;
   border-bottom: 1px solid #eee;
@@ -235,7 +239,10 @@ header .btn {
 }
 
 .banner {
-  padding: 25px 0;
+  padding: 25px 10px;
+}
+.banner img {
+  margin-bottom: 20px;
 }
 
 footer {
